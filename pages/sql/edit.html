@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>SQL</title>
+    <head>
+    <body>
+        <h1>SQL - edit</h1>
+        <a href="/">index</a>
+        <a href="/sql">Sql</a>
+        <br/><br/>
+        <form method="POST" action="/sql/edit">
+            <input name="id" value="{{.ID}}" type="hidden">
+            Name:<input name="name" value="{{.Name}}"> <br>
+            Address:<input name="address" value="{{.Address}}"> <br><br>
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>

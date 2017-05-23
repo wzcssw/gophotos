@@ -1,0 +1,7 @@
+port: 8080  
+filepath:  /Users/Orange/Desktop/go_workspace/src/photos/public/images/
+
+database: "mysql"
+databasename: "godata"
+usename: "root"
+password: "123456"

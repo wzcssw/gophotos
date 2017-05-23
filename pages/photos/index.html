@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Photos</title>
+         <style>
+            .content{
+                width: 80%;
+                margin: 0 auto;
+                background-color: #f2f2f2;
+                height: 100%
+            }
+            .container{
+                width: 95%;
+                margin: 0 auto;
+            }
+            body{
+                background-color:#cccccc
+            }
+        </style>
+    <head>
+    <body>
+        <div class="content">
+            <div class="content">
+                <h1>Photos</h1>
+                <a href="/sql">Sql</a>
+                <form method="POST" enctype="multipart/form-data" action="/upload">
+                    <input type="file" name="myPicture"/>
+                    <input type="submit" value="submit"/>
+                </form>
+                <span style="display: inline-block;">
+                    Hello,<a href="#">{{.Session.Content}}</a>  &nbsp;&nbsp;<a href="/session/del">注销</a>
+                </span>
+                <hr>
+                <table border=1>
+                    <tr>
+                        <th>#</th>
+                        <th>img</th>
+                        <th>FileName</th>
+                        <th>FileSize</th>
+                        <th></th>
+                    </tr>
+                    {{ range $i, $e := .Data }}
+                    <tr>
+                        <td>{{ .Add $i 1}}</td>
+                        <td>
+                            <a href="/img?filename={{.FileName}}">
+                                <img style="width:100px;" src="/img?filename={{.FileName}}"/>
+                            </a>
+                        </td>
+                        <td style="color:grey">{{.FileName}}</td>
+                        <td>{{.GetNiceSize}}</td>
+                        <td>
+                            <a href="/del?filename={{.FileName}}">del</a>
+                        </td>
+                    </tr>
+                    {{ end }}
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

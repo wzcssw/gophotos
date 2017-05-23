@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>SQL</title>
+        <style>
+            .content{
+                width: 80%;
+                margin: 0 auto;
+                background-color: #f2f2f2;
+                height: 100%
+            }
+            .container{
+                width: 95%;
+                margin: 0 auto;
+            }
+            body{
+                background-color:#cccccc
+            }
+        </style>
+    <head>
+    <body>
+        <div class="content">
+            <div class="content">
+                <h1>Login</h1>
+                <form method="POST" action="/session">
+                    <table>
+                        <tr>
+                            <td>
+                                Username:
+                            </td>
+                            <td>
+                                <input name="username" value="">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Password:
+                            </td>
+                            <td>
+                                <input name="password" value="" type="password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <input type="submit" value="Submit">
+                                <span style="color: red;font-size: 10px;"> {{.}} </span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
